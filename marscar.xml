@@ -7,7 +7,45 @@
       </block>
     </value>
     <statement name="DO">
-      <block type="movement_forward" id="10"></block>
+      <block type="movement_forward" id="10">
+        <next>
+          <block type="variables_set" id="61" inline="true">
+            <field name="VAR">X</field>
+            <value name="VALUE">
+              <block type="sensor_spectrometer" id="58">
+                <field name="LIGHT">BLUE</field>
+              </block>
+            </value>
+            <next>
+              <block type="oled_cleardisplay" id="72">
+                <next>
+                  <block type="oled_setcursor" id="81" inline="true">
+                    <value name="STARTX">
+                      <block type="math_number" id="105">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <value name="STARTY">
+                      <block type="math_number" id="112">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="oled_drawnumber" id="168" inline="true">
+                        <value name="NUMBER">
+                          <block type="variables_get" id="176">
+                            <field name="VAR">X</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
     </statement>
   </block>
 </xml>
