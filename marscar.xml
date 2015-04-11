@@ -53,14 +53,15 @@
                           </block>
                         </value>
                         <statement name="DO0">
-                          <block type="robot_delay" id="305" inline="true">
-                            <value name="DELAY">
-                              <block type="math_number" id="312">
-                                <field name="NUM">200</field>
-                              </block>
-                            </value>
+                          <block type="movement_forward" id="10">
                             <next>
-                              <block type="movement_forward" id="10"></block>
+                              <block type="robot_delay" id="305" inline="true">
+                                <value name="DELAY">
+                                  <block type="math_number" id="312">
+                                    <field name="NUM">200</field>
+                                  </block>
+                                </value>
+                              </block>
                             </next>
                           </block>
                         </statement>
